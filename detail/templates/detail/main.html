@@ -105,9 +105,10 @@
                                     {% if check == 1 %}
                                     #{{ filter_list.0  }}
                                     {% elif check == 4 %}
-                                    {{ filter_list2.filter_check.0 }}<br>
-                                    {{ price_list.0 }}
-                                    {% else %}
+                                    # {{ filter_name.0 }}<br>
+                                    {{ sample.0.0 }}<br>
+                                    {{ prices.0.0 }}
+                                    {% elif check == 2 %}
                                     #{{ filter_list2.0.name  }}<br>
                                         {% for i in filter_check %}
                                             {% if i == 1 %}
@@ -128,7 +129,28 @@
                                             {% if i == 6 %}
                                                 #{{ filter_list2.0.6  }}<br>
                                             {% endif %}
-                                        {% endfor %}        
+                                        {% endfor %} 
+                                    {% elif check == 3 %}
+                                        {% for i in filter_check %}
+                                            {% if i == 1 %}
+                                                #{{ filter_list.1  }}<br>
+                                            {% endif %}
+                                            {% if i == 2 %}
+                                                #{{ filter_list.2  }}<br>
+                                            {% endif %}
+                                            {% if i == 3 %}
+                                                #{{ filter_list.3  }}<br>
+                                            {% endif %}
+                                            {% if i == 4 %}
+                                                #{{ filter_list.4  }}<br>
+                                            {% endif %}
+                                            {% if i == 5 %}
+                                                #{{ filter_list.5  }}<br>
+                                            {% endif %}
+                                            {% if i == 6 %}
+                                                #{{ filter_list.6  }}<br>
+                                            {% endif %}
+                                        {% endfor %}    
                                     {% endif %}
                                 </p>
                                 </div>
@@ -139,10 +161,13 @@
                                     {% if check == 1 %}
                                     #{{ filter_list.1  }}
                                     {% elif check == 4 %}
-                                    {{ filter_list2.1 }}<br>
-                                    {{ price_list.1 }}
-                                    {% else %}
-                                    #{{ filter_list2.1.name  }}<br>
+                                    # {{ filter_name.1 }}<br>
+                                    {{ sample.1.0 }}<br>
+                                    {{ prices.0.1 }}
+                                    {% elif check == 2 %}
+                                        {% if filter_list2.1.name %}
+                                        #{{ filter_list2.1.name  }}<br>
+                                        {% endif %}
                                         {% for i in filter_check %}
                                             {% if i == 1 %}
                                                 #{{ filter_list2.1.1  }}<br>
@@ -162,6 +187,27 @@
                                             {% if i == 6 %}
                                                 #{{ filter_list2.1.6  }}<br>
                                             {% endif %}
+                                        {% endfor %}
+                                    {% elif check == 3 %}
+                                        {% for i in filter_check %}
+                                            {% if i == 1 %}
+                                                #{{ filter_list.1  }}<br>
+                                            {% endif %}
+                                            {% if i == 2 %}
+                                                #{{ filter_list.2  }}<br>
+                                            {% endif %}
+                                            {% if i == 3 %}
+                                                #{{ filter_list.3  }}<br>
+                                            {% endif %}
+                                            {% if i == 4 %}
+                                                #{{ filter_list.4  }}<br>
+                                            {% endif %}
+                                            {% if i == 5 %}
+                                                #{{ filter_list.5  }}<br>
+                                            {% endif %}
+                                            {% if i == 6 %}
+                                                #{{ filter_list.6  }}<br>
+                                            {% endif %}
                                         {% endfor %}        
                                     {% endif %}
                                 </p>
@@ -172,10 +218,11 @@
                                     {% if check == 1 %}
                                     #{{ filter_list.2  }}
                                     {% elif check == 4 %}
-                                    {{ filter_list2.2 }}<br>
-                                    {{ price_list.2 }}
-                                    {% else %}
-                                    #{{ filter_list2.2.name  }}<br>
+                                    # {{ filter_name.2 }}<br>
+                                    {{ sample.2.0 }}<br>
+                                    {{ prices.0.2 }}
+                                    {% elif check == 2 %}
+                                        #{{ filter_list2.2.name  }}<br>
                                         {% for i in filter_check %}
                                             {% if i == 1 %}
                                                 #{{ filter_list2.2.1  }}<br>
@@ -194,6 +241,27 @@
                                             {% endif %}
                                             {% if i == 6 %}
                                                 #{{ filter_list2.2.6  }}<br>
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% elif check == 3 %}
+                                        {% for i in filter_check %}
+                                            {% if i == 1 %}
+                                                #{{ filter_list.1  }}<br>
+                                            {% endif %}
+                                            {% if i == 2 %}
+                                                #{{ filter_list.2  }}<br>
+                                            {% endif %}
+                                            {% if i == 3 %}
+                                                #{{ filter_list.3  }}<br>
+                                            {% endif %}
+                                            {% if i == 4 %}
+                                                #{{ filter_list.4  }}<br>
+                                            {% endif %}
+                                            {% if i == 5 %}
+                                                #{{ filter_list.5  }}<br>
+                                            {% endif %}
+                                            {% if i == 6 %}
+                                                #{{ filter_list.6  }}<br>
                                             {% endif %}
                                         {% endfor %}        
                                     {% endif %}

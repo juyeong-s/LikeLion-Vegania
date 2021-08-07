@@ -1,8 +1,8 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
-filter_list2 = []
-price_list = []
+titles = []
+prices = []
 
 url_list = [
     "https://search.shopping.naver.com/search/all?query=%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC&frm=NVSHATC&prevQuery=%EC%8B%9D%EB%A3%8C%ED%92%88",    # 마켓컬리
@@ -12,6 +12,7 @@ url_list = [
 ]
 
 def getClassValue(url, tag, className):
+    filter_list2 = []
     html = urlopen(url)
     bs = BeautifulSoup(html, "html.parser")
     content = bs.find_all(tag,{"class", className})
@@ -22,6 +23,7 @@ def getClassValue(url, tag, className):
     return filter_list2
 
 def getNameValue(url, tag, className) :
+    price_list = []
     html = urlopen(url)
     bs = BeautifulSoup(html, "html.parser")
     content = bs.find_all(tag, {"class": className})
@@ -32,16 +34,13 @@ def getNameValue(url, tag, className) :
     return price_list
 
 def getshop():
-    # from .jsondata.cate4_data import url_list, getClassValue, getNameValue
 
-    titles = []
     tag = 'a'
     className = 'basicList_link__1MaTN'
     for url in url_list :
         titles.append(getClassValue(url, tag, className))
     print(titles)
 
-    prices = []
     tag = 'span'
     # className = 'basicList_price__2r23_'
     className = "price_num__2WUXn"
