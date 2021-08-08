@@ -162,21 +162,15 @@ def filter(request, check):
             for item in selected:
                 if item == "채소류":
                     filter_check.append(1)
-                    filter_list.append(filter_list2[0]["1"])
-                    filter_list.append(filter_list2[1]["1"])
-                    filter_list.append(filter_list2[2]["1"])
+                    filter_list.append(filter_list2[0][random.randrange(1,8)])
                 if item == "과일류":
                     filter_check.append(2)
-                    filter_list.append(filter_list2[0]["2"])
-                    filter_list.append(filter_list2[1]["2"])
-                    filter_list.append(filter_list2[2]["2"])
+                    filter_list.append(filter_list2[1][random.randrange(1,8)])
                 if item == "곡류":
                     filter_check.append(3)
-                    filter_list.append(filter_list2[0]["3"])
-                    filter_list.append(filter_list2[1]["3"])
-                    filter_list.append(filter_list2[2]["3"])
                 # if len(filter_check) < 2:
                 #     filter_list.append(filter_list2[1])
+                    filter_list.append(filter_list2[2][random.randrange(1,8)])
                 #     filter_list.append(filter_list2[2])
                 # if len(filter_check) < 3:
                 #     filter_list.append(filter_list2[2])
